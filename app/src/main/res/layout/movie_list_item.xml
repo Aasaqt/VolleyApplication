@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/review_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:background="#f1f3f9">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/item"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_user"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/small_profile2" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_user"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="Username"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/remarks"
+            android:paddingLeft="20dp"
+            android:layout_below="@+id/username"
+            android:layout_toRightOf="@+id/iv_user"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_rating_text"
+            android:paddingLeft="20dp"
+            android:text="Rating"
+            android:layout_below="@+id/remarks"
+            android:layout_toRightOf="@+id/iv_user"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_below="@+id/tv_rating_text"
+            android:layout_toRightOf="@+id/iv_user"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</RelativeLayout>
