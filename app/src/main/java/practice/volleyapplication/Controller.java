@@ -15,6 +15,7 @@ import com.android.volley.toolbox.Volley;
 /**
  * Created by aasaqt on 22/9/15.
  */
+
 public class Controller {
 
     private static final RetryPolicy DEFAULT_RETRY_POLICY = new RetryPolicy() {
@@ -103,12 +104,6 @@ public class Controller {
         volleyTypeRequest.setShouldCache(false);
         dispatchToQueue(volleyTypeRequest, context);
     }
-
-
-
-
-
-
 
     public interface ERROR_CODES {
         int BAD_REQUEST = 400;

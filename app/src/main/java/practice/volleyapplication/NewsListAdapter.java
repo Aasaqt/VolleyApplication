@@ -6,40 +6,36 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import java.util.ArrayList;
 
 /**
  * Created by aasaqt on 23/9/15.
  */
-public class MoviesListAdapter extends RecyclerView.Adapter<MovieListHolder> {
+public class NewsListAdapter extends RecyclerView.Adapter<NewsListHolder> {
     Context mContext;
-    ArrayList<MovieListModel> list;
+    ArrayList<NewsListModel> list;
 
-    public MoviesListAdapter(Context c,ArrayList<MovieListModel> list){
+    public NewsListAdapter(Context c, ArrayList<NewsListModel> list){
         this.mContext  =  c;
         this.list = list;
     }
     @Override
-    public MovieListHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public NewsListHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(mContext).inflate(R.layout.movie_list_item,parent ,false);
-        MovieListHolder mh = new MovieListHolder(v);
+        NewsListHolder mh = new NewsListHolder(v);
         return mh;
     }
 
     @Override
-    public void onBindViewHolder(MovieListHolder holder, int position) {
-        final MovieListModel item = list.get(position);
-        holder.username.setText(item.title);
-        holder.remarks.setText(item.title);
-        holder.rating.setText(""+item.getRating());
-
-
+    public void onBindViewHolder(NewsListHolder holder, int position) {
+        final NewsListModel item = list.get(position);
+        holder.username.setText(item.heading);
+        holder.remarks.setText(item.description);
         holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, ExtendedListActivity.class);
-                intent.putExtra("location_id", ""+item.getTitle());
+                intent.putExtra("location_id", ""+item.getPost_id());
                 mContext.startActivity(intent);
             }
         });

@@ -6,7 +6,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -18,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
     LinearLayoutManager mLayoutManager;
     int page = 1;
     boolean reachedEnd = false;
-    MoviesListAdapter mAdapter;
+    NewsListAdapter mAdapter;
     boolean loading = false;
-    ArrayList<MovieListModel> movieListModel;
+    ArrayList<NewsListModel> movieListModel;
     RequestListener mRequestListener = new RequestListener() {
         @Override
         public void onRequestStarted() {
@@ -60,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(mLayoutManager);
-        movieListModel = new ArrayList<MovieListModel>();
-        mAdapter = new MoviesListAdapter(this, movieListModel);
+        movieListModel = new ArrayList<NewsListModel>();
+        mAdapter = new NewsListAdapter(this, movieListModel);
         recyclerView.setAdapter(mAdapter);
         page = 1;
         recyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {

@@ -9,7 +9,7 @@ import android.widget.TextView;
 /**
  * Created by aasaqt on 23/9/15.
  */
-public class MovieListHolder extends RecyclerView.ViewHolder {
+public class NewsListHolder extends RecyclerView.ViewHolder {
     TextView username;
     TextView rating;
     TextView remarks;
@@ -17,7 +17,7 @@ public class MovieListHolder extends RecyclerView.ViewHolder {
     RelativeLayout item;
 
 
-    public MovieListHolder(View itemView) {
+    public NewsListHolder(View itemView) {
         super(itemView);
         username = (TextView)itemView.findViewById(R.id.username);
         rating = (TextView)itemView.findViewById(R.id.rating);
